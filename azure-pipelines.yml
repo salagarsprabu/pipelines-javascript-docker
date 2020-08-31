@@ -36,7 +36,7 @@ stages:
       displayName: Push
       inputs:
         command: push
-        containerRegistry: dockerRegistryServiceConnection1
+        containerRegistry: dockerid
         repository: azurejavaapp
         tags: |
           tag1
