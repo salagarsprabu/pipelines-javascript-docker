@@ -25,17 +25,18 @@ stages:
       inputs:
         command: build
         dockerfile: '$(Build.SourcesDirectory)/app/Dockerfile'
+        repository: azurejavaapp
         tags: |
           $(tag)
     - task: Docker@2
       displayName: Login to DockerHub
       inputs:
         command: login
-        containerRegistry: dockerid   
+        containerRegistry: mydocker   
     - task: Docker@2
       displayName: Push
       inputs:
-        command: buildAndPush
+        command: push
         ## containerRegistry: dockerid
         repository: azurejavaapp
         tags: |
