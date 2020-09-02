@@ -23,7 +23,7 @@ stages:
     - task: Docker@2
       displayName: Build an image
       inputs:
-        command: build
+        command: buildandpush
         dockerfile: '$(Build.SourcesDirectory)/app/Dockerfile'
         repository: senthil123/azurejavaapp
         tags: |
