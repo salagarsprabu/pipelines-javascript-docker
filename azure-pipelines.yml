@@ -36,7 +36,7 @@ stages:
       displayName: Push
       inputs:
         command: buildAndPush
-        containerRegistry: senthil123
+        containerRegistry: dockerid
         repository: azurejavaapp
         tags: |
            $(tag)
