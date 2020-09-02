@@ -36,7 +36,7 @@ stages:
       displayName: Push
       inputs:
         command: buildAndPush
-        containerRegistry: dockerid
+        ## containerRegistry: dockerid
         repository: azurejavaapp
         tags: |
            $(tag)
