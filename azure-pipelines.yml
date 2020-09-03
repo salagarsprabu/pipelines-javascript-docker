@@ -28,17 +28,11 @@ stages:
     - task: Docker@2
       displayName: Build an image
       inputs:
-        command: buildandpush
+        command: build
         dockerfile: '$(Build.SourcesDirectory)/app/Dockerfile'
-        repository: senthil123/azurejavaapp
-        tags: |
-          $(tag)  
-    - task: Docker@2
-      displayName: Push
-      inputs:
-        command: push
         containerRegistry: mydocker
         repository: senthil123/azurejavaapp
         tags: |
-           $(tag)
+          $(tag)  
+  
            
